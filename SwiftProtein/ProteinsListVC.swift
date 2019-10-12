@@ -56,8 +56,15 @@ extension ProteinsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let proteinDetail = ProteinDetailsVC()
-        self.navigationController?.pushViewController(proteinDetail, animated: true)
+        Api.getProteinFullDescription(name: filteredMoleculs[indexPath.row]) {[weak self] pdbFile in
+            guard let self = self, let pdbFile = pdbFile else { return }
+            DispatchQueue.main.async {
+                let proteinDetail = ProteinDetailsVC()
+                proteinDetail.pdbFile = pdbFile
+                proteinDetail.name = self.filteredMoleculs[indexPath.row]
+                self.navigationController?.pushViewController(proteinDetail, animated: true)
+            }
+        }
     }
 }
 

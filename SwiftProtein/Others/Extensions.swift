@@ -27,11 +27,12 @@ enum Elements: String {
     case Unknown
     
     func introduce() -> UIColor {
+        print(self.rawValue)
         switch self {
         case .Carbon: return UIColor(red: 200.0 / 255.0, green: 200.0 / 255.0, blue: 200.0 / 255.0, alpha: 1.0) // light grey
         case .Oxygen: return UIColor(red: 240.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0) // red
         case .Hydrogen: return UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0) // white
-        case .Nitrogen: return UIColor(red: 143.0 / 255.0, green: 143.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0) // light blue
+        case .Nitrogen: return UIColor(red: 43.0 / 255.0, green: 71.0 / 255.0, blue: 221.0 / 255.0, alpha: 1.0) // light blue
         case .Sulphur: return UIColor(red: 255.0 / 255.0, green: 200.0 / 255.0, blue: 50.0 / 255.0, alpha: 1.0) // sulphur yellow
         case .Boron, .Chlorine: return .green // green 
         case .Phosphorus, .Iron, .Barium: return UIColor(red: 255.0 / 255.0, green: 165.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0) // orange
