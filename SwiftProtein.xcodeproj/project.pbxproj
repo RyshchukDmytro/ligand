@@ -16,6 +16,8 @@
 		66C460D62351D98C00BFAB41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460D42351D98C00BFAB41 /* LaunchScreen.storyboard */; };
 		66C460DE2351E25300BFAB41 /* ProteinsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460DD2351E25300BFAB41 /* ProteinsListVC.swift */; };
 		66C460E02351E2C500BFAB41 /* ProteinTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460DF2351E2C500BFAB41 /* ProteinTVC.swift */; };
+		787BC3C623521C2700DBD708 /* 00O_model.pdb in Resources */ = {isa = PBXBuildFile; fileRef = 787BC3C523521C2700DBD708 /* 00O_model.pdb */; };
+		787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3C723521CFF00DBD708 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		66C460D72351D98C00BFAB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C460DD2351E25300BFAB41 /* ProteinsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProteinsListVC.swift; path = ../ProteinsListVC.swift; sourceTree = "<group>"; };
 		66C460DF2351E2C500BFAB41 /* ProteinTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProteinTVC.swift; path = ../ProteinTVC.swift; sourceTree = "<group>"; };
+		787BC3C523521C2700DBD708 /* 00O_model.pdb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 00O_model.pdb; sourceTree = "<group>"; };
+		787BC3C723521CFF00DBD708 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +51,11 @@
 			isa = PBXGroup;
 			children = (
 				66C460CB2351D98900BFAB41 /* AppDelegate.swift */,
+				787BC3C723521CFF00DBD708 /* Extensions.swift */,
 				66C460D22351D98C00BFAB41 /* Assets.xcassets */,
 				66C460D42351D98C00BFAB41 /* LaunchScreen.storyboard */,
 				660B81D22351E88700D9D8A8 /* ligands.txt */,
+				787BC3C523521C2700DBD708 /* 00O_model.pdb */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 				66C460D32351D98C00BFAB41 /* Assets.xcassets in Resources */,
 				66C460D12351D98900BFAB41 /* Main.storyboard in Resources */,
 				660B81D32351E88700D9D8A8 /* ligands.txt in Resources */,
+				787BC3C623521C2700DBD708 /* 00O_model.pdb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C460DE2351E25300BFAB41 /* ProteinsListVC.swift in Sources */,
+				787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */,
 				66C460E02351E2C500BFAB41 /* ProteinTVC.swift in Sources */,
 				66C460CE2351D98900BFAB41 /* LoginVC.swift in Sources */,
 				66C460CC2351D98900BFAB41 /* AppDelegate.swift in Sources */,
