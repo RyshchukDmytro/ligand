@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		660B81D32351E88700D9D8A8 /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 660B81D22351E88700D9D8A8 /* ligands.txt */; };
 		660B81D62351F2B700D9D8A8 /* ProteinDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B81D52351F2B700D9D8A8 /* ProteinDetailsVC.swift */; };
+		660B81DE23523A5D00D9D8A8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B81DD23523A5D00D9D8A8 /* API.swift */; };
 		66C460CC2351D98900BFAB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460CB2351D98900BFAB41 /* AppDelegate.swift */; };
 		66C460CE2351D98900BFAB41 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460CD2351D98900BFAB41 /* LoginVC.swift */; };
 		66C460D12351D98900BFAB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460CF2351D98900BFAB41 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		660B81D22351E88700D9D8A8 /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		660B81D52351F2B700D9D8A8 /* ProteinDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinDetailsVC.swift; sourceTree = "<group>"; };
+		660B81DD23523A5D00D9D8A8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		66C460C82351D98900BFAB41 /* SwiftProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C460CB2351D98900BFAB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C460CD2351D98900BFAB41 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		66C460CA2351D98900BFAB41 /* SwiftProtein */ = {
 			isa = PBXGroup;
 			children = (
+				660B81DD23523A5D00D9D8A8 /* API.swift */,
 				660B81D42351F26C00D9D8A8 /* Login */,
 				66C460E12351E2D700BFAB41 /* Proteins */,
 				660B81D72351F2C300D9D8A8 /* ProteinDetails */,
@@ -194,6 +197,7 @@
 				66C460CE2351D98900BFAB41 /* LoginVC.swift in Sources */,
 				66C460CC2351D98900BFAB41 /* AppDelegate.swift in Sources */,
 				660B81D62351F2B700D9D8A8 /* ProteinDetailsVC.swift in Sources */,
+				660B81DE23523A5D00D9D8A8 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

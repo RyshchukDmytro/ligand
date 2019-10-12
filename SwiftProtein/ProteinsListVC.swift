@@ -53,6 +53,15 @@ extension ProteinsListVC: UITableViewDelegate, UITableViewDataSource {
         cell.proteinName.text = filteredMoleculs[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        proteinsTableView.deselectRow(at: indexPath, animated: true)
+        let api = Api()
+        api.getProteinFullDescription(name: filteredMoleculs[indexPath.row])
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProteinDetailsVC") as! ProteinDetailsVC
+        //        storyboard.checkin = checkin
+        //        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
 }
 
 // MARK: - SearchBar extension
