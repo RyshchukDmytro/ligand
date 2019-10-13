@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+extension UIColor {
+   open class var relationColor: UIColor {
+        return UIColor(red: 121.0/255.0, green: 121.0/255.0, blue: 121.0/255.0, alpha: 1.0)
+    }
+}
+
 enum Elements: String {
     case Carbon = "C"
     case Oxygen = "O"

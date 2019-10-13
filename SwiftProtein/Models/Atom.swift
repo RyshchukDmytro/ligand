@@ -30,14 +30,13 @@ struct Atom {
 }
 
 extension SCNNode {
-    static func lineNode(from: simd_float3, to: simd_float3, radius : CGFloat = 0.25) -> SCNNode
-    {
+    static func lineNode(from: simd_float3, to: simd_float3, radius : CGFloat = 0.25) -> SCNNode {
         let vector = to - from
         let height = simd_length(vector)
         
         //cylinder
         let cylinder = SCNCylinder(radius: radius, height: CGFloat(height))
-        cylinder.firstMaterial?.diffuse.contents = UIColor.white
+        cylinder.firstMaterial?.diffuse.contents = UIColor.relationColor
         
         //line node
         let lineNode = SCNNode(geometry: cylinder)
@@ -46,6 +45,7 @@ extension SCNNode {
         let line_axis = simd_float3(0, height/2, 0)
         lineNode.simdPosition = from + line_axis
         
+        // rotate by two points
         let vector_cross = simd_cross(line_axis, vector)
         let qw = simd_length(line_axis) * simd_length(vector) + simd_dot(line_axis, vector)
         let q = simd_quatf(ix: vector_cross.x, iy: vector_cross.y, iz: vector_cross.z, r: qw).normalized

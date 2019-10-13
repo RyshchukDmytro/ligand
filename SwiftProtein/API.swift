@@ -11,7 +11,7 @@ import Foundation
 class Api {
     class func getProteinFullDescription(name link: String, comletionHandler: @escaping (String?) -> Void) {
         DispatchQueue.global().async {
-            guard let url = URL(string: "https://file.rcsb.org/ligands/view/\(link)_model.pdb") else { comletionHandler(nil)
+            guard let url = URL(string: "https://file.rcsb.org/ligands/view/\(link)_ideal.pdb") else { comletionHandler(nil)
                 return
             }
             do {

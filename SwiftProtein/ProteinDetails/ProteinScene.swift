@@ -12,7 +12,7 @@ import SceneKit
 class ProteinScene: SCNScene {
     
     private var cameraNode: SCNNode!
-    private var atoms: [SCNNode] = []
+    var atoms: [SCNNode] = []
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -99,9 +99,9 @@ class ProteinScene: SCNScene {
             let node = SCNNode.lineNode(from: simd_float3(atoms[first - 1].position),
                                         to: simd_float3(atoms[item - 1].position),
                                         radius: 0.1)
+            node.name = "CONECT"
             self.rootNode.addChildNode(node)
         }
-        
     }
     
     private func createMolecular() {
