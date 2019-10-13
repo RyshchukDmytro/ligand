@@ -56,9 +56,18 @@ extension ProteinsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Api.getProteinFullDescription(name: filteredMoleculs[indexPath.row]) {[weak self] pdbFile in
-            guard let self = self, let pdbFile = pdbFile else { return }
+            guard let self = self else { return }
+            guard let pdbFile = pdbFile else {
+                let pop = UIAlertController(title: "Trouble with internet connection.", message: "Please check your internet connection and try again.", preferredStyle: .alert)
+                let alert = UIAlertAction(title: "Ok", style: .default)
+                pop.addAction(alert)
+                self.present(pop, animated: true)
+                return
+            }
             DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 let proteinDetail = ProteinDetailsVC()
                 proteinDetail.pdbFile = pdbFile
                 proteinDetail.name = self.filteredMoleculs[indexPath.row]

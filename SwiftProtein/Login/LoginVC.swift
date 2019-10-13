@@ -24,6 +24,7 @@ class LoginVC: UIViewController {
         if !context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             idButton.isHidden = true
         }
+        detectTouchId()
     }
 
     @IBAction func touchIdAction(_ sender: UIButton) {

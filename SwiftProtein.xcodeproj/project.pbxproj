@@ -14,8 +14,6 @@
 		66C460D12351D98900BFAB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460CF2351D98900BFAB41 /* Main.storyboard */; };
 		66C460D32351D98C00BFAB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C460D22351D98C00BFAB41 /* Assets.xcassets */; };
 		66C460D62351D98C00BFAB41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460D42351D98C00BFAB41 /* LaunchScreen.storyboard */; };
-		781747C923529DF20034FF72 /* 10R_model.pdb in Resources */ = {isa = PBXBuildFile; fileRef = 781747C823529DF20034FF72 /* 10R_model.pdb */; };
-		787BC3C623521C2700DBD708 /* 00O_model.pdb in Resources */ = {isa = PBXBuildFile; fileRef = 787BC3C523521C2700DBD708 /* 00O_model.pdb */; };
 		787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3C723521CFF00DBD708 /* Extensions.swift */; };
 		787BC3CA23522FD600DBD708 /* ProteinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3C923522FD600DBD708 /* ProteinScene.swift */; };
 		787BC3CD235243E100DBD708 /* ProteinsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3CB235243E100DBD708 /* ProteinsListVC.swift */; };
@@ -34,8 +32,6 @@
 		66C460D22351D98C00BFAB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C460D52351D98C00BFAB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C460D72351D98C00BFAB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781747C823529DF20034FF72 /* 10R_model.pdb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 10R_model.pdb; sourceTree = "<group>"; };
-		787BC3C523521C2700DBD708 /* 00O_model.pdb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 00O_model.pdb; sourceTree = "<group>"; };
 		787BC3C723521CFF00DBD708 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		787BC3C923522FD600DBD708 /* ProteinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinScene.swift; sourceTree = "<group>"; };
 		787BC3CB235243E100DBD708 /* ProteinsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProteinsListVC.swift; path = SwiftProtein/ProteinsListVC.swift; sourceTree = SOURCE_ROOT; };
@@ -63,8 +59,6 @@
 				66C460D22351D98C00BFAB41 /* Assets.xcassets */,
 				66C460D42351D98C00BFAB41 /* LaunchScreen.storyboard */,
 				660B81D22351E88700D9D8A8 /* ligands.txt */,
-				781747C823529DF20034FF72 /* 10R_model.pdb */,
-				787BC3C523521C2700DBD708 /* 00O_model.pdb */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -195,10 +189,8 @@
 			files = (
 				66C460D62351D98C00BFAB41 /* LaunchScreen.storyboard in Resources */,
 				66C460D32351D98C00BFAB41 /* Assets.xcassets in Resources */,
-				781747C923529DF20034FF72 /* 10R_model.pdb in Resources */,
 				66C460D12351D98900BFAB41 /* Main.storyboard in Resources */,
 				660B81D32351E88700D9D8A8 /* ligands.txt in Resources */,
-				787BC3C623521C2700DBD708 /* 00O_model.pdb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,13 +356,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CSCETSS9EC;
+				DEVELOPMENT_TEAM = K2LC483PKZ;
 				INFOPLIST_FILE = SwiftProtein/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = km.com.SwiftProtein;
+				PRODUCT_BUNDLE_IDENTIFIER = km.com.SwiftProtein2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,13 +374,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CSCETSS9EC;
+				DEVELOPMENT_TEAM = K2LC483PKZ;
 				INFOPLIST_FILE = SwiftProtein/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = km.com.SwiftProtein;
+				PRODUCT_BUNDLE_IDENTIFIER = km.com.SwiftProtein2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
