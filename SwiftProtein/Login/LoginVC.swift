@@ -22,15 +22,12 @@ class LoginVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         if !context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-//            idButton.isHidden = true
+            idButton.isHidden = true
         }
     }
 
     @IBAction func touchIdAction(_ sender: UIButton) {
-//        detectTouchId()
-        
-        let proteinsListVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProteinsListVC") as! ProteinsListVC
-        self.navigationController?.pushViewController(proteinsListVC, animated: true)
+        detectTouchId()
     }
     
     private func detectTouchId() {
