@@ -49,7 +49,9 @@ class ProteinDetailsVC: UIViewController {
     }
     
     @objc func addTapped() {
-        
+        let webView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebVC") as! WebVC
+        webView.proteinName = navigationItem.title ?? "10r"
+        navigationController?.pushViewController(webView, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

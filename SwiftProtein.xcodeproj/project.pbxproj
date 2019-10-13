@@ -14,6 +14,7 @@
 		66C460D12351D98900BFAB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460CF2351D98900BFAB41 /* Main.storyboard */; };
 		66C460D32351D98C00BFAB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C460D22351D98C00BFAB41 /* Assets.xcassets */; };
 		66C460D62351D98C00BFAB41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460D42351D98C00BFAB41 /* LaunchScreen.storyboard */; };
+		66FD018D2353AEDE0059C4D0 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD018C2353AEDE0059C4D0 /* WebVC.swift */; };
 		787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3C723521CFF00DBD708 /* Extensions.swift */; };
 		787BC3CA23522FD600DBD708 /* ProteinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3C923522FD600DBD708 /* ProteinScene.swift */; };
 		787BC3CD235243E100DBD708 /* ProteinsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BC3CB235243E100DBD708 /* ProteinsListVC.swift */; };
@@ -32,6 +33,7 @@
 		66C460D22351D98C00BFAB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C460D52351D98C00BFAB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C460D72351D98C00BFAB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66FD018C2353AEDE0059C4D0 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		787BC3C723521CFF00DBD708 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		787BC3C923522FD600DBD708 /* ProteinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinScene.swift; sourceTree = "<group>"; };
 		787BC3CB235243E100DBD708 /* ProteinsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProteinsListVC.swift; path = SwiftProtein/ProteinsListVC.swift; sourceTree = SOURCE_ROOT; };
@@ -76,6 +78,7 @@
 			children = (
 				660B81D52351F2B700D9D8A8 /* ProteinDetailsVC.swift */,
 				787BC3C923522FD600DBD708 /* ProteinScene.swift */,
+				66FD018C2353AEDE0059C4D0 /* WebVC.swift */,
 			);
 			path = ProteinDetails;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */,
 				66C460CE2351D98900BFAB41 /* LoginVC.swift in Sources */,
 				66C460CC2351D98900BFAB41 /* AppDelegate.swift in Sources */,
+				66FD018D2353AEDE0059C4D0 /* WebVC.swift in Sources */,
 				787BC3D02352579500DBD708 /* API.swift in Sources */,
 				660B81D62351F2B700D9D8A8 /* ProteinDetailsVC.swift in Sources */,
 			);

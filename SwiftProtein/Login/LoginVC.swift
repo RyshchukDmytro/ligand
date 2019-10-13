@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var idButton: UIButton!
     let context: LAContext = LAContext()
+    var firstEnter = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,10 @@ class LoginVC: UIViewController {
         if !context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             idButton.isHidden = true
         }
-        detectTouchId()
+        if firstEnter {
+            firstEnter = false
+            detectTouchId()
+        }
     }
 
     @IBAction func touchIdAction(_ sender: UIButton) {
@@ -50,4 +54,3 @@ class LoginVC: UIViewController {
         }
     }
 }
-
