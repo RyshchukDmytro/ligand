@@ -79,7 +79,7 @@ class ProteinScene: SCNScene {
     }
     
     private func createAtom(words: [String]) {
-        guard let atom = AtomOne(text: words) else { return }
+        guard let atom = Atom(text: words) else { return }
         let sphereGeometry = SCNSphere(radius: 0.3)
         sphereGeometry.firstMaterial?.diffuse.contents = atom.color
         let sphereNode = SCNNode(geometry: sphereGeometry)
@@ -92,11 +92,16 @@ class ProteinScene: SCNScene {
     private func createRelation(words: [String]) {
         let conection: [Int] = words.compactMap{Int($0)}
         guard let first = conection.first, atoms.count > first else { return }
-        print("conection : \(conection)")
-        for conect in 1..<conection.count {
-            let relation = Relation(start: atoms[first].position, finish: atoms[conect].position)
-            print("cylinder : \(relation.start.x) - \(relation.finish.x), \(relation.getDistance())")
+        print("conection : \(conection), \(atoms.count), \(first)")
+        for i in 1..<conection.count {
+            let item = conection[i]
+            guard item - 1 < atoms.count else { continue } // index out of the range
+            let node = SCNNode.lineNode(from: simd_float3(atoms[first - 1].position),
+                                        to: simd_float3(atoms[item - 1].position),
+                                        radius: 0.1)
+            self.rootNode.addChildNode(node)
         }
+        
     }
     
     private func createMolecular() {
