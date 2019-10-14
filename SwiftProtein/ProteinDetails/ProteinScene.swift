@@ -11,8 +11,9 @@ import SceneKit
 
 class ProteinScene: SCNScene {
     
+    // MARK: - Properties
     private var cameraNode: SCNNode!
-    var atoms: [SCNNode] = []
+    private var atoms: [SCNNode] = []
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -34,7 +35,7 @@ class ProteinScene: SCNScene {
         createMolecular()
     }
     
-    // TODO: make better
+    // MARK: - Functions
     private func setUpCamera() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -45,24 +46,21 @@ class ProteinScene: SCNScene {
         var yMax: Float = atoms[0].position.y
         var zMax: Float = atoms[0].position.z
         
-        for el in atoms {
-            
-            if xMin > el.position.x {
-                xMin = el.position.x
+        for atom in atoms {
+            if xMin > atom.position.x {
+                xMin = atom.position.x
             }
-            if xMax < el.position.x {
-                xMax = el.position.x
+            if xMax < atom.position.x {
+                xMax = atom.position.x
             }
-            
-            if yMin > el.position.y {
-                yMin = el.position.y
+            if yMin > atom.position.y {
+                yMin = atom.position.y
             }
-            if yMax < el.position.y {
-                yMax = el.position.y
+            if yMax < atom.position.y {
+                yMax = atom.position.y
             }
-            
-            if zMax < el.position.z {
-                zMax = el.position.z
+            if zMax < atom.position.z {
+                zMax = atom.position.z
             }
         }
         

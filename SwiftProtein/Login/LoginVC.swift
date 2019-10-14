@@ -9,14 +9,18 @@
 import UIKit
 import LocalAuthentication
 
-class LoginVC: UIViewController {
+class LoginVC: UIVC {
 
+    // MARK: - Outlets
     @IBOutlet weak var idButton: UIButton!
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    let context: LAContext = LAContext()
-    var firstEnter = true
     
+    // MARK: - Properties
+    private let context: LAContext = LAContext()
+    private var firstEnter = true
+    
+    // MARK: - ViewCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,9 +40,11 @@ class LoginVC: UIViewController {
         }
     }
 
+    // MARK: - Actions
     @IBAction func touchIdAction(_ sender: UIButton) {
         detectTouchId()
     }
+    
     @IBAction func enterWithoutTouchId(_ sender: UIButton) {
         if loginTF.text == "Admin" && passwordTF.text == "Root" {
             goToProteinsListVC()
@@ -47,6 +53,7 @@ class LoginVC: UIViewController {
         }
     }
     
+    // MARK: - Functions
     private func detectTouchId() {
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             let reason = NSLocalizedString("We need your touch id to enter you further", comment: "")
@@ -62,36 +69,10 @@ class LoginVC: UIViewController {
         }
     }
     
-    private func popupAlert(title: String, message: String, action: String) {
-        let title = NSLocalizedString(title, comment: "")
-        let message = NSLocalizedString(message, comment: "")
-        let action = NSLocalizedString(action, comment: "")
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: action, style: .destructive))
-        self.present(alert, animated: true)
-    }
-    
     private func goToProteinsListVC() {
         DispatchQueue.main.async {
             let proteinsListVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProteinsListVC") as! ProteinsListVC
             self.navigationController?.pushViewController(proteinsListVC, animated: true)
         }
-    }
-}
-
-extension LoginVC: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }

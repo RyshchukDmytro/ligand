@@ -10,6 +10,7 @@
 		660B81D32351E88700D9D8A8 /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 660B81D22351E88700D9D8A8 /* ligands.txt */; };
 		660B81D62351F2B700D9D8A8 /* ProteinDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B81D52351F2B700D9D8A8 /* ProteinDetailsVC.swift */; };
 		66352B3923546C050008BE3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66352B3B23546C050008BE3F /* Localizable.strings */; };
+		66352B3E23547D8A0008BE3F /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66352B3D23547D8A0008BE3F /* VCExtension.swift */; };
 		66C460CC2351D98900BFAB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460CB2351D98900BFAB41 /* AppDelegate.swift */; };
 		66C460CE2351D98900BFAB41 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C460CD2351D98900BFAB41 /* LoginVC.swift */; };
 		66C460D12351D98900BFAB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C460CF2351D98900BFAB41 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		66352B3823546BC70008BE3F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		66352B3A23546C050008BE3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66352B3C23546C090008BE3F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66352B3D23547D8A0008BE3F /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		66C460C82351D98900BFAB41 /* SwiftProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C460CB2351D98900BFAB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C460CD2351D98900BFAB41 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				787BC3D223525C7E00DBD708 /* Atom.swift */,
+				66352B3D23547D8A0008BE3F /* VCExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				787BC3CD235243E100DBD708 /* ProteinsListVC.swift in Sources */,
 				787BC3D323525C7E00DBD708 /* Atom.swift in Sources */,
+				66352B3E23547D8A0008BE3F /* VCExtension.swift in Sources */,
 				787BC3CA23522FD600DBD708 /* ProteinScene.swift in Sources */,
 				787BC3CE235243E100DBD708 /* ProteinTVC.swift in Sources */,
 				787BC3C823521CFF00DBD708 /* Extensions.swift in Sources */,

@@ -11,14 +11,15 @@ import SceneKit
 
 class ProteinDetailsVC: UIViewController {
     
+    // MARK: - Properties
     private var proteinScene: SCNView!
-    var pdbFile: String?
-    var name: String?
-    var label = UILabel()
-    
     private var currentNode: SCNNode?
     private var previousNodeColor: UIColor?
-
+    private var atomDescriptionLabel = UILabel()
+    var pdbFile: String?
+    var name: String?
+    
+    // MARK: - ViewCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         proteinScene = SCNView(frame: self.view.frame)
@@ -32,19 +33,21 @@ class ProteinDetailsVC: UIViewController {
         // like a Viber Big Name 
         navigationItem.largeTitleDisplayMode = .always
         
-        label = UILabel(frame: CGRect(x: view.frame.width - 20, y: view.frame.height - 60, width: 20, height: 50))
-        label.textColor = .green
-        self.view.addSubview(label)
+        atomDescriptionLabel = UILabel(frame: CGRect(x: view.frame.width - 20, y: view.frame.height - 60, width: 20, height: 50))
+        atomDescriptionLabel.textColor = .green
+        self.view.addSubview(atomDescriptionLabel)
         
         let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         let add = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(addTapped))
         navigationItem.rightBarButtonItems = [share, add]
     }
     
+    // MARK: - Functions
     @objc func shareTapped() {
         let share = proteinScene.snapshot()
-        
-        let activityVC = UIActivityViewController(activityItems: [share], applicationActivities: nil)
+        let proteinName = navigationItem.title ?? ""
+        let message = NSLocalizedString("This is protein: ", comment: "")  + proteinName
+        let activityVC = UIActivityViewController(activityItems: [share, message], applicationActivities: nil)
         self.present(activityVC, animated: true)
     }
     
@@ -73,8 +76,8 @@ class ProteinDetailsVC: UIViewController {
                 self.currentNode?.geometry?.firstMaterial?.diffuse.contents = self.previousNodeColor?.withAlphaComponent(0.5)
                                 
                 print("Select node: \(hitNode.name)")
-                self.label.text = hitNode.name ?? ""
-                self.label.textColor = self.previousNodeColor
+                self.atomDescriptionLabel.text = hitNode.name ?? ""
+                self.atomDescriptionLabel.textColor = self.previousNodeColor
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class ProteinTVC: UITableViewCell {
 
+    // MARK: - Outlets
     @IBOutlet weak var proteinName: UILabel!
     
     override func awakeFromNib() {

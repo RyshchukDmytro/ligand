@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ProteinsListVC: UIViewController {
+class ProteinsListVC: UIVC {
 
-    // MARK: - outlets
+    // MARK: - Outlets
     @IBOutlet weak var proteinsSearchBar: UISearchBar!
     @IBOutlet weak var proteinsTableView: UITableView!
     
-    // MARK: - properties
+    // MARK: - Properties
     private var moleculs = [String]()
     private var filteredMoleculs = [String]()
     
@@ -28,7 +28,7 @@ class ProteinsListVC: UIViewController {
         readFromLigandFile()
     }
     
-    // MARK: - functions
+    // MARK: - Functions
     private func readFromLigandFile() {
         let path = Bundle.main.path(forResource: "ligands", ofType: "txt")
         do {
@@ -61,13 +61,9 @@ extension ProteinsListVC: UITableViewDelegate, UITableViewDataSource {
         Api.getProteinFullDescription(name: filteredMoleculs[indexPath.row]) {[weak self] pdbFile in
             guard let self = self else { return }
             guard let pdbFile = pdbFile else {
-                let title = NSLocalizedString("Trouble with internet connection", comment: "")
-                let message = NSLocalizedString("Please check your internet connection and try again", comment: "")
-                let action = NSLocalizedString("Ok", comment: "")
-                let pop = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                let alert = UIAlertAction(title: action, style: .default)
-                pop.addAction(alert)
-                self.present(pop, animated: true)
+                DispatchQueue.main.async {
+                    self.popupAlert(title: "Trouble with internet connection", message: "Please check your internet connection and try again", action: "Ok")
+                }
                 return
             }
             DispatchQueue.main.async {

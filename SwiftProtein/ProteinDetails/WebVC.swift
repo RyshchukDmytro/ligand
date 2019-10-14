@@ -11,15 +11,18 @@ import WebKit
 
 class WebVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
+    // MARK: - Properties
     private var webView = WKWebView()
     var proteinName: String = ""
     
+    // MARK: - ViewCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = proteinName
         showWebView()
     }
     
+    // MARK: - Functions
     private func showWebView() {
         webView.uiDelegate = self
         webView.navigationDelegate = self
