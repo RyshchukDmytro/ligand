@@ -23,7 +23,8 @@ class ProteinsListVC: UIViewController {
         super.viewDidLoad()
 
         navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "Proteins"
+        navigationItem.title = NSLocalizedString("Proteins", comment: "")
+        proteinsSearchBar.placeholder = NSLocalizedString("Search", comment: "")
         readFromLigandFile()
     }
     
@@ -60,8 +61,11 @@ extension ProteinsListVC: UITableViewDelegate, UITableViewDataSource {
         Api.getProteinFullDescription(name: filteredMoleculs[indexPath.row]) {[weak self] pdbFile in
             guard let self = self else { return }
             guard let pdbFile = pdbFile else {
-                let pop = UIAlertController(title: "Trouble with internet connection.", message: "Please check your internet connection and try again.", preferredStyle: .alert)
-                let alert = UIAlertAction(title: "Ok", style: .default)
+                let title = NSLocalizedString("Trouble with internet connection", comment: "")
+                let message = NSLocalizedString("Please check your internet connection and try again", comment: "")
+                let action = NSLocalizedString("Ok", comment: "")
+                let pop = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                let alert = UIAlertAction(title: action, style: .default)
                 pop.addAction(alert)
                 self.present(pop, animated: true)
                 return

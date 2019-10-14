@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SwiftProtein
+
+  Created by Dmytro Ryshchuk on 10/14/19.
+  Copyright © 2019 Dmytro Ryshchuk. All rights reserved.
+*/
+
+"Login or password is incorrect" = "Login or password is incorrect";
+"Try another one" = "Try another one";
+"Login" = "Login";
+"Password" = "Password";
+"We need your touch id to enter you further" = "We need your touch id to enter you further";
+"Something go wrong" = "Something go wrong";
+"Try one more time" = "Try one more time";
+"Cancel" = "Cancel";
+"Proteins" = "Proteins";
+"Search" = "Search";
+"Trouble with internet connection" = "Trouble with internet connection";
+"Please check your internet connection and try again" = "Please check your internet connection and try again";
+"Ok" = "Ok";
